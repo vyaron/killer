@@ -1,0 +1,11 @@
+<header class="gameOver animated flash">
+    <h1 translate="Game Over"></h1>
+    <h2>{{winner.name}} <span translate="you are the Winner!"></span></h2>
+</header>
+<img src="images/g.gif" alt="winner" class="img-responsive">
+<div style="margin-top:75px;">
+    <div class="btn-group">
+        <a ng-click="newGame()" class="btn btn-success btn-xs" translate="New Game"></a>
+        <a ng-click="newGameWithSamePlayers()" class="btn btn-default btn-xs" translate="Play again with the same players"></a>
+    </div>
+</div>

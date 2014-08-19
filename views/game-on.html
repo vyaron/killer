@@ -1,0 +1,32 @@
+<h3 translate="Done Revealing Tasks"></h3>
+<h2 translate="Game in progress."></h2>
+<div class="row">
+    <div class="col-xs-6 player" ng-repeat="player in players">
+
+        <a ng-click="setPlayer(player)" data-toggle="modal" data-target=".donePlayer">
+            <div class="thumbnail">
+                <img src="images/ninja-odd.png" alt="killer-ninja" class="img-responsive" style="cursor:pointer;">
+
+
+                <span class="glyphicon glyphicon-remove killed" ng-show="player.killed"></span>
+                <div class="caption">
+                    <p>{{player.name}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <a class="btn btn-warning pull-right" ng-show="!resetGame" ng-click="reset()" translate="Restart"></a>
+    <a class="btn btn-default pull-right" ng-show="resetGame" ng-click="newGame()" translate="New Game"></a>
+    <a class="btn btn-default pull-right" ng-show="resetGame" ng-click="newGameSamePlayers()" translate="Existing players"></a>
+</div>
+<div class="modal fade donePlayer" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <h3><span translate=""></span> {{player.name}}?</h3>
+            <a class="btn btn-lg btn-success" ng-click="itsMe()" translate="Yes I swear I am!"></a>
+            <a class="btn btn-lg btn-warning" ng-click="wrongPlayer()" translate="Go Back"></a>
+        </div>
+    </div>
+</div>

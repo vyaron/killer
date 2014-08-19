@@ -1,0 +1,11 @@
+<h1 translate="Revealing Tasks"></h1>
+<h2><span class="pn">{{player.name}}</span> <span translate="Your task is to kill"></span> <span class="pn">{{player.nameToKill}}</span> <span translate="With the word"></span> <span class="pn">{{player.word}}</span></h2>
+<div>
+
+
+    <div class="btn-group">
+        <a translate="Go Back" ng-hide="nextTask" class="btn btn-warning" ui-sref="game-on"><!-- <i class="glyphicon glyphicon-arrow-right"></i> --> </a>
+        <a translate="I did it!" class="btn btn-success" ng-click="playerKilled()" ng-hide="nextTask"><!-- <i class="fa fa-thumbs-up"></i> --></a>
+        <a translate="Got it!" ng-show="nextTask" class="btn btn-info" ui-sref="game-on">קיבלתי <!-- <i class="fa fa-thumbs-up"></i> --></a>
+    </div>
+</div>

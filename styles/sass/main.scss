@@ -1,0 +1,184 @@
+@import "bourbon/bourbon";
+
+html {
+    overflow-x: hidden;
+      height: 100%;
+}
+
+.donePlayer .modal-content {
+    top: 220px;
+    padding: 30px;
+    a {
+        margin-top: 20px;
+    }
+}
+
+body {
+    color: #fff;
+    background: #212121;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #212121 0%, #e5e5e5 100%) no-repeat;
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #212121), color-stop(100%, #e5e5e5)) no-repeat;
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #212121 0%, #e5e5e5 100%) no-repeat;
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #212121 0%, #e5e5e5 100%) no-repeat;
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #212121 0%, #e5e5e5 100%) no-repeat;
+    /* IE10+ */
+    background: linear-gradient(to bottom, #212121 0%, #e5e5e5 100%) no-repeat;
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#212121', endColorstr='#e5e5e5',GradientType=0 );
+    /* IE6-9 */
+     height: 100%;
+    margin: 0;
+    background-attachment: fixed;
+}
+
+#{$all-text-inputs} {
+    color: #000;
+}
+
+.pull-left {
+    margin-top: 30px;
+}
+
+div.main {
+    text-align: center;
+    padding: 50px;
+}
+
+header h2 {
+    color: #BAFFBF;
+}
+
+header img {
+    margin-top: 20px;
+}
+
+div.prepare {
+    margin-top: 30px;
+}
+
+div.prepare p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+div.prepare input, ul.players li > input {
+    width:20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.prepare div > a {
+    width: 50%;
+    margin-top: 7px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+ul.players li {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+ul.players li > input {
+    margin-right: 10px;
+    width: 100%;
+}
+
+div.addPlayer > a {
+    position: relative;
+    left: 115px;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+.whoAreYou {
+    padding: 20px;
+    margin: 0;
+}
+
+.whoAreYou h3 {
+    margin-bottom: 40px;
+}
+
+.killed {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    right: 8%;
+}
+
+.col-sm-4 img, p {
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+.col-sm-4 p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+.gameOver {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.glyphicon-cog {
+    font-size: 3.5em;
+    @include animation(spinner 2s linear infinite);
+}
+
+
+@include keyframes(spinner) {
+    from {
+        @include transform(rotate(-360deg));
+    }
+    to {
+        @include transform(rotate(360deg));
+    }
+}
+
+
+.help-block {
+    color: #C91D1D;
+}
+
+.modal {
+    color: #000;
+}
+
+.btn-group>.btn:first-child {
+margin-left: 5px;
+}
+
+.info {
+    padding:20px;
+    h3 {
+        color:#515ACA;
+    }
+}
+
+
+a {
+    color:#fff;
+}
+
+.pn {
+    color:#F3FF9B;
+}
+
+.glyphicon-remove {
+    font-size: 8em;
+color: #E97272;
+}
+

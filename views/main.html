@@ -1,0 +1,32 @@
+<header>
+  <h1 translate="Killer"></h1>
+  <h4 translate="Talk yourself out of it"></h4>
+  <img src="images/main.png" alt="killer" width=140>
+</header>
+<div class="prepare">
+  <form name="mainForm">
+    <p style="cursor: default;"><span translate="Prepare a Game for"></span> <input type="number" required ng-model="numPlayers" required> <span translate="players"></span> </p>
+    <p class="help-block" ng-show="formInvalid" translate="minimum three players"></p>
+  </form>
+  <div style="margin-top:20px;"><a class="btn btn-info btn-lg" ng-click="setNumberPlayers()" ng-disabled="mainForm.$invalid"><span translate="Continue"></span> <!-- <span class="glyphicon glyphicon-arrow-left"></span> --></a></div>
+</div>
+<div class="row">
+  <div style="margin-top: 10px;">
+    <a class="pull-right" ng-show="enLang == 'he'" ng-click="changeLang('en',0)">English</a>
+    <a class="pull-right" ng-show="enLang == 'en'" ng-click="changeLang('he',1)">Hebrew</a>
+  </div>
+  <a class="btn btn-primary pull-left btn-xs" data-toggle="modal" data-target=".bs-example-modal-sm" translate="instructions"></a>
+</div>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content info">
+      <h3 translate="Killer">רוצח במילה</h3>
+      <img src="images/main.png" alt="killer" width=100>
+      <h5 translate="The game is for a group of people (at least 3) that are together."></h5>
+      <h5 translate="Each player gets a mission:"></h5>
+      <h5 translate="a name of another player (the victim) that he needs to eliminate and a secret word."></h5>
+      <h5 translate="The killer will need to make his victim say the secret word."></h5> <h5 translate="A player that was killed, is out of the game and his mission goes to his killer."></h5>
+      <h5><b translate="Last man standing is the winner!"></b></h5>
+    </div>
+  </div>
+</div>

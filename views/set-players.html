@@ -1,0 +1,11 @@
+<h2 translate="Add the players:"></h2>
+<form name="playersForm">
+<ul class="list-unstyled players">
+    <li ng-repeat="player in players"><span translate="Player Name:"></span><input type="text" ng-model="player.name" class="form-control" ng-required="players.length === 3"></li>
+</ul>
+<div class="addPlayer">
+    <a href="" ng-click="addPlayer()" translate="Add player"></a>
+</div>
+<div><i class="glyphicon glyphicon-cog" ng-show="spinner"></i></div>
+<a class="btn btn-info btn-lg" ng-click="doneGetPlayersNames()" ng-hide="spinner" ng-disabled="playersForm.$invalid" translate="Continue"> <!-- <i class="glyphicon glyphicon-arrow-left"></i> --></a>
+</form>

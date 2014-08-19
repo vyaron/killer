@@ -1,0 +1,34 @@
+<!-- SHOW INFO -->
+
+<div ng-show="showInfo">
+    <h1 translate="Killers-Chain is Ready!"></h1>
+
+    <h2 translate="I will now call each player in a random order and reveal his task."></h2>
+    <div>
+        <a ng-click="revealingNames()" class="btn btn-info btn-lg" translate="OK, Do it!"> <!-- <i class="glyphicon glyphicon-arrow-left"></i> --></a>
+    </div>
+    <div><a ui-sref="set-players" class="btn btn-warning pull-left" translate="Go Back"> <!-- <i class="glyphicon glyphicon-arrow-right"></i> --> </a></div>
+</div>
+
+<!-- CALL TO PLAYER  -->
+
+<div ng-show="showPlayerName">
+    <h1></h1>
+    <h3>{{player.name}}</h3>
+    <div>
+        <a translate="I’m Here!" class="btn btn-success btn-lg" ng-click="showPlayerTask()"><!-- <i class="fa fa-thumbs-up"></i> --></a>
+    </div>
+</div>
+
+
+<!-- SHOW PLAYER TASK  -->
+
+<div ng-show="displayTask">
+<h1 translate="Revealing Tasks"></h1>
+<h2><span class="pn">{{player.name}}</span> <span translate="Your task is to kill"></span> <span class="pn">{{player.nameToKill}}</span> <span translate="With the word"></span> <span class="pn">{{player.word}}</span></h2>
+    <div>
+        <a class="btn btn-lg btn-info" ng-hide="gameOn" ng-click="nextPlayerTask()" translate="Got it!"> <!-- <i class="fa fa-thumbs-up"></i> --></a>
+        <a class="btn btn-lg btn-warning" ng-show="gameOn" ui-sref="game-on" translate="Go Back"><!-- <i class="glyphicon glyphicon-arrow-right"></i> --></a>
+        <a class="btn btn-lg btn-success" ng-show="gameOn" ng-click="playerKilled()" translate="I did it!"> <!-- <i class="fa fa-thumbs-up"></i> --></a>
+    </div>
+</div>
